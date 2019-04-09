@@ -1,0 +1,18 @@
+<!-- <%= resource_name.to_s.humanize %> -->
+
+<div class="container" style="text-align: center">
+  <div class="wrapper">
+    <div class="form-edit">
+      <h2 class="form-signin-heading">비밀번호 찾기</h2>
+        <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+        <%= f.error_notification %>
+        <%= f.input :email, input_html: { autocomplete: "email", class: "form-control", placeholder: "이메일" }, required: true, autofocus: true, label: false %>
+      <div class="form-actions">
+        <br>
+        <%= f.button :submit, "이메일로 비밀번호 전송", data: { confirm: "비밀번호가 이메일로 전송되었습니다." }, class: "btn btn-lg btn-primary btn-block"%>
+        <hr>
+      </div>
+      <% end %> <!-- simple_form_for do |f| -->
+    </div>
+  </div>
+</div>

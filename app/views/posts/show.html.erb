@@ -1,0 +1,97 @@
+<div style="background-color: rgba(240, 240, 241, 0.49); text-align: center;">
+  <div class="container">
+    <div class="row" id="first-show">
+      <div class="col-md-6 offset-md-3">
+        <div class="form-group">
+          <%= image_tag @post.image.url, class: "img-responsive" if @post.image? %>
+        </div>
+        <div class="form-group" id="like-show">
+          <div class="col-xs-6">
+            <i class="fas fa-thumbs-up" style="margin-right: 10px;" ></i> <%= @post.likes.size %> 개
+          </div>
+          <div class="col-xs-6">
+        <% if Like.find_by(user_id: current_user.id, post_id: @post.id) %>
+          <i class="far fa-thumbs-up" style="color: blue; margin-right: 10px;"></i> <%= link_to("좋아요 취소","/likes/#{@post.id}/destroy",{method: "post"}) %>
+        <% else %>
+          <i class="far fa-thumbs-up" style="color: blue; margin-right: 10px;"></i> <%= link_to("좋아요", "/likes/#{@post.id}/create", {method: "post"}) %>
+        <% end %>
+          </div>
+        </div>
+        <div>
+          <div class="form-group" id="title-show">
+            <%= @post.title %>
+          </div>
+        </div>
+        <div class="form-group" id="description-show">
+          "<%= render_with_hashtags(@post.description) %>"
+        </div>
+        <div class="form-group" id="cook-info">
+          <img src="<%=asset_path 'temperature.png'%>"></img>
+          <%= @post.temperature %> 도
+          <img src="<%=asset_path 'time.png'%>"></img>
+          <%= @post.time %> 분
+        </div>
+      </div> <!-- col-md-6 offset-md-3 -->
+    </div> <!-- row -->
+
+    <div class="row justify-content-center">
+        <div class="col-12" id="ingredient-show">
+          <div class="form-group" style="padding: 10px;">
+            <ol>
+            <p>레시피 재료</p>
+            <% for @ingredient in @post.ingredients %>
+              <li><%= @ingredient.content %></li>
+            <% end %>
+            </ol>
+          </div>
+        </div>
+        <div class="col-12" id="step-show">
+          <div class="form-group" style="padding: 10px;">
+            <p>레시피 방법</p>
+            <% for @step in @post.steps %>
+              <li><%= @step.direction %></li>
+            <% end %>
+          </div>
+        </div>
+      </div>
+
+      <div class="row" id="carousel-show">
+        <div class="col-md-6 offset-md-3">
+          <div class="form-group">
+            <div id = "carousel-example-generic" class= "carousel slide" data-ride= "carousel">
+                <!-- Wrapper for slides -->
+              <div class="carousel-inner">
+              <% @post_attachments.each do |p| %>
+                <div class="item">
+                  <%= image_tag p.avatar_url %>
+                </div>
+              <!-- Controls -->
+               <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+               </a>
+               <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+              </a>
+              <% end %>
+            </div>
+             <script type="text/javascript">
+               $(function(){
+                 $('.carousel').carousel({interval: false});
+                 $( '.item:first' ).addClass('active');
+                });
+              </script>
+            </div>
+          </div>
+          <div class="form-group">
+            <%= link_to '목록', posts_path, class: "form-control", id: "add-form" %>
+            <% if can? :update, @post %>
+            <%= link_to '수정', edit_post_path(@post), class: "form-control", id: "add-form" %>
+            <% end %>
+            <% if can? :destroy, @post %>
+            <%= link_to '삭제', @post, method: :delete, method: :delete, data: { confirm: '진짜로 지울건가요???' }, class: "form-control", id: "add-form" %>
+            <% end %>
+          </div>
+        </div> <!-- col-md-6 offset-md-3 -->
+      </div> <!-- row -->
+    </div> <!-- container -->
+  </div> <!-- background-color -->

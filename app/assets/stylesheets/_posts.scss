@@ -1,0 +1,501 @@
+#wrap {
+  min-width: 1024px;
+}
+
+.search-button {
+  font-family: Noto Sans KR;
+  font-size: 27px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: black;
+  vertical-align: middle;
+  margin-top: 10px;
+
+}
+
+.search-button input::placeholder {
+  font-size: 20px;
+  text-align: center;
+}
+
+
+.search-button input:focus::-webkit-input-placeholder,
+.search-button textarea:focus::-webkit-input-placeholder { /* WebKit browsers */
+  color:transparent;
+}
+
+.search-button input:focus:-moz-placeholder,
+.search-button textarea:focus:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color:transparent;
+}
+
+.search-button input:focus::-moz-placeholder,
+.search-button textarea:focus::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color:transparent;
+}
+
+.search-button input:focus:-ms-input-placeholder,
+.search-button textarea:focus:-ms-input-placeholder { /* Internet Explorer 10+ */
+  color:transparent;
+}
+
+.main-category {
+  font-family: Noto Sans KR;
+  font-size: 15px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: -0.8px;
+  border-top:1px solid rgba(0, 0, 0, 0.5);
+  border-bottom:1px solid rgba(0, 0, 0, 0.5);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: -webkit-center;
+
+}
+
+.main-category a {
+  color: black;
+  padding-right: 10px;
+}
+
+.main-category img {
+  width: 40px;
+}
+
+
+.recipe-box {
+  height: 480px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+  margin-top: 20px;
+}
+
+.recipe-box ul {
+  list-style-type: none;
+  padding-left: 0px;
+}
+
+.recipe-box li:first-child {
+  border-top: 0.5px solid #c9c9c9;
+  border-bottom: 0.5px solid #c9c9c9;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 60px;
+  padding-right: 60px;
+  background-color: #2f2f2f;
+  text-align: center;
+  font-family: Noto Sans KR;
+  font-size: 25px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: -0.8px;
+  color: #ffffff;
+}
+
+.recipe-box ul li a {
+  color: white;
+}
+
+img.recipe-index {
+  width: 100%;
+  height: 60%;
+  object-fit: cover;
+}
+
+.option {
+  text-align: center;
+  font-family: Noto Sans KR;
+  font-size: 18px;
+  background-color: #ffffff;
+  margin-top: 15px;
+  position: relative;
+  margin-top: 20px;
+}
+
+.option img {
+  width: 25px;
+  margin-bottom: 5px;
+}
+
+.index-temperature {
+  width: 50%;
+  float: left;
+  border-right: 1px solid black;
+}
+
+.index-time {
+  width: 50%;
+  float: left;
+}
+
+.text-temperature {
+  font-family: Noto Sans KR;
+  font-size: 35px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #2f2f2f;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.text-time {
+  font-family: Noto Sans KR;
+  font-size: 35px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #2f2f2f;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.option-count {
+  position: absolute;
+  vertical-align: bottom;
+  bottom: 0px;
+  font-size: 12px;
+  right: 10px;
+}
+
+// 레시피 공유하기 _form.html.erb
+
+.main-text{
+  font-family: Noto Sans KR;
+  font-size: 30px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: -1.1px;
+  text-align: center;
+  color: #4a4a4a;
+  margin-top: 40px;
+}
+
+.sub-text {
+  font-family: Noto Sans KR;
+  font-size: 18px;
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #4a4a4a;
+  margin-top: 25px;
+  margin-bottom: 40px;
+}
+
+.form-group p {
+  font-family: Noto Sans KR;
+  font-size: 18px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: -0.6px;
+  color: #2f2f2f;
+}
+
+.add_nested_fields_link {
+  font-family: Noto Sans KR;
+  font-size: 15px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: -0.3px;
+  text-align: center;
+  color: #b0b0b0;
+}
+
+.form-submit-button{
+  width: 280px;
+  height: 59px;
+  font-family: Noto Sans KR;
+  font-size: 20px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: -0.7px;
+  text-align: center;
+  color: #ffffff;
+  border-radius: 42px;
+  background-color: #000000;
+}
+
+#email-password{
+  background-color: #4CBB9D;
+  border: none;
+}
+
+.post-paginate {
+  margin: auto;
+}
+
+@font-face {
+  font-family: 'Bitter';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Bitter Regular'), local('Bitter-Regular'), url(https://fonts.gstatic.com/s/bitter/v13/rax8HiqOu8IVPmn7f4xs.ttf) format('truetype');
+}
+* {
+  box-sizing: border-box;
+}
+
+#nested-ingredirents{
+  text-align: center;
+  background: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+#nested-ingredirents a{
+  font-size: 15px;
+  color: #000000;
+}
+
+#nested-steps{
+  text-align: center;
+  background: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+#nested-steps a {
+  font-size: 15px;
+  color: #000000;
+}
+
+
+#first-form {
+  background: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #e6e7e8;
+}
+
+#first-form select {
+  background-color: beige;
+}
+
+#second-form {
+  background: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #e6e7e8;
+}
+
+#third-form {
+  background: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  margin-right: -15px;
+  margin-left: -15px;
+  border: 1px solid #e6e7e8;
+}
+
+#forth-form {
+  background: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  margin-right: -15px;
+  margin-left: -15px;
+  border: 1px solid #e6e7e8;
+}
+
+#forth-form input {
+  width: 200px;
+  margin-bottom: 20px;
+  background-color: gray;
+  border: none;
+  margin: auto;
+}
+
+#action-form{
+  background: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  margin-right: -15px;
+  margin-left: -15px;
+  border: 1px solid #e6e7e8;
+}
+
+
+@media screen and (max-width: 767px) {
+  #first-show {
+    margin-bottom: 20px;
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #e6e7e8;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  #first-show {
+    margin-top: 70px;
+    margin-bottom: 20px;
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #e6e7e8;
+  }
+}
+
+#title-show{
+  margin-top: 50px;
+  font-family: Noto Sans KR;
+  font-size: 40px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: -0.8px;
+  color: #4a4a4a;
+}
+
+#description-show {
+  font-family: Noto Sans KR;
+  font-size: 15px;
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: #4a4a4a;
+  margin-top: 25px;
+  margin-bottom: 50px;
+}
+
+#cook-info{
+  font-family: Noto Sans KR;
+  font-size: 25px;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: #4a4a4a;
+  background: rgba(86,61,124,.15);
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-bottom: 20px;
+}
+
+#cook-info img {
+  width: 30px;
+  margin-left: 15px;
+  margin-right: 5px;
+}
+
+#like-show div {
+  font-family: Noto Sans KR;
+  font-size: 13px;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  padding: 5px;
+}
+
+#ingredient-show {
+  font-family: Noto Sans KR;
+  font-size: 20px;
+  font-weight: 80;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 1.5px;
+  text-align: center;
+  color: #4a4a4a;
+  background: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #e6e7e8;
+}
+
+#ingredient-show p {
+  font-family: Noto Sans KR;
+  font-size: 30px;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: -0.5px;
+  text-align: center;
+  color: #4a4a4a;
+}
+
+#ingredient-show li {
+  padding-top: 25px;
+  font-family: Noto Sans KR;
+}
+
+#step-show {
+  font-family: Noto Sans KR;
+  font-size: 20px;
+  font-weight: 80;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 1.5px;
+  text-align: center;
+  color: #4a4a4a;
+  background: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #e6e7e8;
+}
+
+#step-show p {
+  font-family: Noto Sans KR;
+  font-size: 30px;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: -0.5px;
+  text-align: center;
+  color: #4a4a4a;
+}
+
+#step-show li {
+  font-family: Noto Sans KR;
+  padding-top: 30px;
+}
+
+#carousel-show {
+  background: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #e6e7e8;
+}
+
+.carousel {
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.5);
+  border: solid 3px #c9c9c9;
+}
+
+#add-form {
+  background-color: cornsilk;
+  margin-bottom: 5px;
+}

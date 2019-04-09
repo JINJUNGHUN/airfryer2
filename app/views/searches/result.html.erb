@@ -1,0 +1,42 @@
+<h2 class="text-center" style="margin-top: 10px;">검색 결과</h2>
+
+<div class="container" style="margin-bottom: 20px;">
+  <div class="row">
+    <% @searches.each do |post| %>
+    <div class="col-xs-12 col-sm-6 col-lg-6 col-xl-4">
+      <div class="recipe-box">
+          <% if post.image? %>
+            <%= link_to (image_tag post.image.url, class: "recipe-index"), post %>
+          <% end %>
+        <ul>
+          <li><%=link_to post.title.truncate(13, omission: '...'), post %></li>
+            <div class="option">
+              <div class="index-temperature">
+                <img src="<%=asset_path 'temperature.png'%>"></img>
+                <div class="text-temperature">
+                <%= post.temperature %>도
+                </div>
+              </div>
+              <div class="index-time">
+                <img src="<%=asset_path 'time.png'%>"></img>
+                <div class="text-time">
+                <%= post.time %>분
+                </div>
+              </div>
+              <div class="option-count">
+                <i class="fas fa-heart" style="color: red;"></i>
+                <%= post.likes.size %>
+                <i class="fas fa-eye" style="padding-left: 5px; color: cornflowerblue;"></i>
+                <%= "#{post.impressionist_count}" %>
+              </div>
+            </div>
+        </ul>
+      </div> <!--/recipe-box-->
+    </div> <!--/col-md-3-->
+    <% end %>
+    <% if @searches.all.empty? %>
+      <h3 class="text-center" style="margin-top: 30px;">레시피가 없습니다.</h3>
+    <% end %>
+    <%= @test %>
+  </div>
+</div>

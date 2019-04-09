@@ -1,0 +1,26 @@
+<!-- <%= resource_name.to_s.humanize %> -->
+
+<div class="container" style="text-align: center">
+  <div class="wrapper">
+    <div class="form-edit">
+      <h2 class="form-signin-heading">개인정보변경</h2>
+
+        <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+        <%= f.error_notification %>
+
+        <%= f.input :email, input_html: { autocomplete: "email", class: "form-control", placeholder: "이메일" }, required: true, autofocus: true, label: false %>
+        <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+          <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
+        <% end %>
+        <%= f.input :password, input_html: { autocomplete: "new-password", class:"form-control", placeholder: "비밀번호" }, required: false, label: false %>
+        <%= f.input :password_confirmation, input_html: { autocomplete: "new-password", class: "form-control", placeholder: "비밀번호 확인" }, required: false, label: false %>
+        <%= f.input :current_password, input_html: { autocomplete: "current-password", class: "form-control", placeholder: "현재 비밀번호" }, required: true, label: false %>
+      <div class="form-actions">
+        <%= f.button :submit, "저장하기", data: { confirm: "비밀번호가 변경되었습니다." }, class: "btn btn-lg btn-primary btn-block"%>
+        <hr>
+      </div>
+      <% end %> <!-- simple_form_for do |f| -->
+      <%= link_to "탈퇴하기", registration_path(resource_name), data: { confirm: "탈퇴 하시겠습니까?" }, method: :delete, class: "btn-delete btn-lg btn-primary btn-block" %>
+    </div>
+  </div>
+</div>
