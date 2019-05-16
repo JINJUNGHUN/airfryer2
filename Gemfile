@@ -32,7 +32,8 @@ gem 'paranoia'
 gem 'cancancan'
 gem 'rolify'
 gem 'simple_form', '~> 4.1'
-
+gem 'execjs'
+gem 'therubyracer', :platforms => :ruby
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

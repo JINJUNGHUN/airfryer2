@@ -323,6 +323,7 @@ GEM
       activerecord
       kaminari-core (= 1.1.1)
     kaminari-core (1.1.1)
+    libv8 (3.16.14.19)
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -437,6 +438,7 @@ GEM
       json (>= 1.8)
       nokogiri (~> 1.5)
       trollop (~> 2.1)
+    ref (2.0.0)
     regexp_parser (1.3.0)
     representable (3.0.4)
       declarative (< 0.1.0)
@@ -494,6 +496,9 @@ GEM
     sqlite3 (1.3.13)
     terminal-table (1.8.0)
       unicode-display_width (~> 1.1, >= 1.1.1)
+    therubyracer (0.12.3)
+      libv8 (~> 3.16.14.15)
+      ref
     thor (0.20.3)
     thread_safe (0.3.6)
     tilt (2.0.9)
@@ -539,6 +544,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   devise!
   devise-i18n
+  execjs
   figaro
   file_validators
   fog (~> 2.1)
@@ -563,6 +569,7 @@ DEPENDENCIES
   spring
   spring-watcher-listen (~> 2.0.0)
   sqlite3 (~> 1.3.6)
+  therubyracer
   turbolinks (~> 5)
   tzinfo-data
   uglifier (>= 1.3.0)
